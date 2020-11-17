@@ -4,9 +4,7 @@
 
 
 [Rule]
-URL-REGEX,^https?:\/\/(app-)?api\.smzdm\.com\/(v\d\/)?util\/(loading|banner),REJECT-TINYGIF
 
-# 普拉斯影业体验服-可直连观看(https://t.me/Plus_Movie_Best/214)
 DOMAIN,emby-best.xeton.dev,DIRECT
 
 [URL Rewrite]
@@ -37,27 +35,7 @@ DOMAIN,emby-best.xeton.dev,DIRECT
 财新解锁.js = type=http-response,pattern=^https:\/\/course\.caixin\.com\/expert\.course\/course\/reserveapi.* ,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/vhvg/scripts/master/myscript/caixin.js
 财新解锁.js = type=http-response,pattern=^https:\/\/gateway\.caixin\.com\/api\/ucenter\/appapi\/v1\/userinfo ,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/vhvg/scripts/master/myscript/caixin.js
 
-# instapaper解锁Pro
-instapaper.js = type=http-response,pattern=^https://www.instapaper.com/api/subscription_status,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/vhvg/scripts/master/myscript/instapaper.js
-
-# Adguard Premium
-Adguard.js = type=http-response,pattern=^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Sunert/Script/Adguard.js
-
-# 三款PDF APP解锁Pro: PDF Expret点睛和PDF Viewer及(Adbole Acrobat reader未测试）
-pdf.js = type=http-response,pattern=^https://(api|license|createpdf).(revenuecat|pdfexpert|acrobat).com/(v1|api/1.0/pdfexpert6|createpdf/api/users/me)/subscri(bers/|(ption(s|/refresh))),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/vhvg/scripts/master/myscript/pdf.js
-
-# FaceApp unlock 
-FaceApp.js = type=http-response,pattern=^https?:\/\/api\.faceapp\.io(.*)\/api\/v.*\/auth\/user\/credentials,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/vhvg/scripts/master/myscript/FaceApp.js
-
-# Document
-documents.js = type=http-response,pattern=^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/documents.js
-
-# 知乎注入CSS优化网页显示	
-知乎网页优化显示.js = type=http-response,pattern=^https:\/\/www\.zhihu\.com\/question,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/zhihux.user.js
-
-# 百度盘优化网页显示	
-百度盘网页优化显示.js = type=http-response,pattern=^https:\/\/pan\.baidu\.com,requires-body=1,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/baiduPan.js
 
 [MITM]
-hostname = %APPEND% *.caixin.com, www.instapaper.com, mobile-api.adguard.com, license.pdfexpert.com, api.revenuecat.com, createpdf.acrobat.com, api.faceapp.io, *api.smzdm.com, www.zhihu.com, pan.baidu.com
+hostname = %APPEND% *.caixin.com, *api.smzdm.com, www.zhihu.com, pan.baidu.com
 
